@@ -7,5 +7,6 @@ const inputBtn = document.getElementById("input-btn");
 
 
 inputBtn.addEventListener("click", function() {
-  console.log("Button Clicked from addEventListener");
+  myLeads.push(inputEl.value); //one way to add a value from input field
+  console.log(myLeads);
 });
