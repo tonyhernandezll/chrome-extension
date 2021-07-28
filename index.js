@@ -9,6 +9,11 @@ const ulEl = document.getElementById("ul-el"); // 2. Grab the unordered list and
 
 let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") );
 
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  renderLeads();
+}
+
 inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value); //one way to add a value from input field and to push it into the empty array
   inputEl.value = ""; // to clear the value inside the input field after each input is saved
